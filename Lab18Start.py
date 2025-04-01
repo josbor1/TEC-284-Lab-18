@@ -14,10 +14,10 @@ pushButton = Button(7)  # Adjust pin number if needed
 
 def main():
     try:
-        while True:
+        while True: #Always run the underlying code...
             number = generateNumber() #generate a random number
-            displayNumber(number) #dissplay that number
-    except KeyboardInterrupt:
+            displayNumber(number) #display that number
+    except KeyboardInterrupt: #... unless you exit with CTRL+C
         print("\nExiting program.")
 
 def generateNumber():  # Wait for a push, return random die value
