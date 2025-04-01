@@ -32,7 +32,11 @@ def generateNumber():  # Wait for a push, return random die value
 def displayNumber(number):
     # Light up LEDs corresponding to the dice number
     for i, led in enumerate(LEDnumber):
-        led.on() if i < number else led.off()
+        if i < number:
+            led.on()
+        else:
+            led.off()
+            
     time.sleep(1)  # Keep the LEDs on for 1 second
     LEDnumber.off()  # Turn off all LEDs
 
